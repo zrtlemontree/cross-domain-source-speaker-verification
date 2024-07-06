@@ -1,0 +1,14 @@
+VC_type: AgainVC
+load:  ./againvc/pretrain/latest_checkpoint.pth # Load a checkpoint.
+source: ./test_audio/attackers # Source path. A directory containing .wav files.
+target: ./test_audio/victims # Target path. A directory containing .wav files.
+conversion_file: ./toy_manifest.txt # The path to conversion list file
+output: output # Output directory.
+device: cuda:2 # device
+config: ./againvc/config/train_again-c4s.yaml # The train config with respect to the model resumed.
+dsp_config: ./againvc/config/preprocess.yaml # The dsp config with respect to the training data.
+dry: true # whether to dry run
+debug: true # whether to dry run
+seed: 961998 # random seed
+njobs: 4 
+seglen:  # Segment length.

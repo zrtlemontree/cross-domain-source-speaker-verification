@@ -1,0 +1,8 @@
+VC_type: VQMIVC
+conversion_file: ./toy_manifest.txt # The path to conversion list file
+device: cuda:2 # device
+source: ./test_audio/attackers # Source path. A directory containing .wav files.
+target: ./test_audio/victims # Target path. A directory containing .wav files.
+output: output # Output directory.
+model_path: vqmivc/checkpoints/VQMIVC-model.ckpt-500.pt
+temp_dir: vqmivc_temp # the dir to store the temp files

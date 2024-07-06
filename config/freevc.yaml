@@ -1,0 +1,9 @@
+VC_type: FreeVC
+hpfile: ./freevc/configs/freevc.json # path to json config file
+ptfile: ./freevc/checkpoints/freevc.pth # path to pth file
+speaker_encoder_pt: ./freevc/speaker_encoder/ckpt/pretrained_bak_5805000.pt # path to pt file of speaker encoder
+conversion_file: ./toy_manifest.txt # The path to conversion list file
+device: cuda:2 # device
+source: ./test_audio/attackers # Source path. A directory containing .wav files.
+target: ./test_audio/victims # Target path. A directory containing .wav files.
+outdir: output # Output directory.
